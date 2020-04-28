@@ -79,17 +79,33 @@ class master:
         return True
 
 
-def interaction():
-    print("\n\n\n Choose an Option.")
-    print("\n 1. View Frequency of Monograms")
-    print("\n 2. View Frequency of Bigrams")
-    print("\n 3. View Frequency of Trigrams")
-    print("\n 4. Replace letters (EnCrYpted : replace)[such that E=r, n=e]")
-    opt = input()
-    if not opt in [1,2,3,4]:
-        interaction()
-    elif opt == 1:
+    def interaction(self):
+        print("\n\n\n Choose an Option.")
+        print("\n 1. View Frequency of Monograms")
+        print("\n 2. View Frequency of Bigrams")
+        print("\n 3. View Frequency of Trigrams")
+        print("\n 4. Replace letters (EnCrYpted : replace)[such that E=r, n=e]")
+        print("\n 5. Exit")
+        opt = int(input())
+        if  opt ==5:
+            exit()
+        elif opt == 1:
+            print("\n\n MonoGram Frequency :\n"+json.dumps(self.frequency_table))
+        elif opt == 2:
+            print("\n\n BiGram Frequency :\n"+json.dumps(self.bigram_table))
+        elif opt == 3:
+            print("\n\n TriGram Frequency :\n"+json.dumps(self.trigram_table))
+        elif opt == 4:
+            print("\n\n Enter word/char to replace : Correct Chars/word")
+            word = input()
+            arr = word.split(":")
+            print(arr)
+        else:
+            print("\n\n Invalid Choice!")
         
+
+        self.interaction()
+
 
 
 def main(encrypted):
@@ -105,7 +121,7 @@ def main(encrypted):
     print(guess_replacer)
     if not len(guess_replacer) == 0:
         process.letters_replace(guess_replacer)
-    interaction()
+    process.interaction()
 
 
 
