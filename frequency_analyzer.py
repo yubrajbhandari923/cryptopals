@@ -86,7 +86,7 @@ class master:
         print("\n 3. View Frequency of Trigrams")
         print("\n 4. Replace letters (EnCrYpted : replace)[such that E=r, n=e]")
         print("\n 5. Exit")
-        opt = int(input())
+        opt = int(input(">"))
         if  opt ==5:
             exit()
         elif opt == 1:
@@ -97,7 +97,7 @@ class master:
             print("\n\n TriGram Frequency :\n"+json.dumps(self.trigram_table))
         elif opt == 4:
             print("\n\n Enter word/char to replace : Correct Chars/word")
-            word = input()
+            word = input(">")
             arr = word.split(":")
             print(arr)
         else:
