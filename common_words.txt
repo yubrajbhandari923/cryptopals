@@ -13,7 +13,7 @@ this
 an	
 would	
 first
-a	
+ a 	
 have	
 each	
 make	
@@ -93,7 +93,7 @@ can
 these
 could
 may
-I	
+ I 	
 said
 so
 people
