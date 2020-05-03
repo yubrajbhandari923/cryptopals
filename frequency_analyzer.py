@@ -146,7 +146,7 @@ def main(encrypted):
 
 
 if __name__ == "__main__":
-    if len(sys.argv)>2:
-        print("Usuage : python frequency_analyazer.py 'Text to analyze' ")
+    if not len(sys.argv)==2 :
+        print("Usuage : python {} 'Text to analyze' ".format(sys.argv[0]))
         exit()
     main(sys.argv[1])
